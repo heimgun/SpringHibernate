@@ -16,7 +16,13 @@ public class DeliveryGuy implements Delivery {
     }
 
 
+    //Setter
+    public void setaPackage(Package aPackage) {
+        this.aPackage = aPackage;
+    }
 
+
+    //Getter
     @Override
     public String getName() {
         return "Yo bro! Im John.";

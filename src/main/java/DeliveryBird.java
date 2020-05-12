@@ -16,6 +16,12 @@ public class DeliveryBird implements Delivery{
 
     }
 
+    //Setters
+    public void setaPackage(Package aPackage) {
+        this.aPackage = aPackage;
+    }
+
+    //Getters
     @Override
     public String getName(){
         return "Pip";
