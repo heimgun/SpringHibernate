@@ -3,6 +3,8 @@ public class DeliveryGuy implements Delivery {
     //Dependency
     private Package aPackage;
 
+    public int phoneNumber;
+    public String area;
 
     //Constructor for dependency - injection
     public DeliveryGuy(Package a){
@@ -21,6 +23,13 @@ public class DeliveryGuy implements Delivery {
         this.aPackage = aPackage;
     }
 
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     //Getter
     @Override
@@ -31,5 +40,13 @@ public class DeliveryGuy implements Delivery {
     @Override
     public String getItem() {
         return aPackage.getItem();
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getArea() {
+        return area;
     }
 }

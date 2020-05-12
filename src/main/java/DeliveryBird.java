@@ -6,6 +6,9 @@ public class DeliveryBird implements Delivery{
     //Dependency
     private Package aPackage;
 
+    public int phoneNumber;
+    public String area;
+
     //Constructor for Dependency injection
     public DeliveryBird(Package a){
         aPackage = a;
@@ -21,6 +24,14 @@ public class DeliveryBird implements Delivery{
         this.aPackage = aPackage;
     }
 
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
     //Getters
     @Override
     public String getName(){
@@ -32,4 +43,11 @@ public class DeliveryBird implements Delivery{
         return aPackage.getItem();
     }
 
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getArea() {
+        return area;
+    }
 }

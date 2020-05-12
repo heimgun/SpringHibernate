@@ -2,6 +2,9 @@ public class DeliveryRobot implements Delivery {
 
     private Package aPackage;
 
+    public int phoneNumber;
+    public String area;
+
     public DeliveryRobot(Package a){
         aPackage = a;
     }
@@ -17,6 +20,13 @@ public class DeliveryRobot implements Delivery {
         this.aPackage = aPackage;
     }
 
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     //Getters
     @Override
@@ -27,5 +37,13 @@ public class DeliveryRobot implements Delivery {
     @Override
     public String getItem() {
         return aPackage.getItem();
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getArea() {
+        return area;
     }
 }
