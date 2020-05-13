@@ -1,7 +1,10 @@
+package springP;
 
+import org.springframework.stereotype.Component;
+import springP.Delivery;
 
-
-public class DeliveryBird implements Delivery{
+@Component ("Delivery")
+public class DeliveryBird implements Delivery {
 
     //Dependency
     private Package aPackage;

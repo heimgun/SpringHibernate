@@ -1,3 +1,5 @@
+package springP;
+
 public interface Delivery {
 
     public String getName();
