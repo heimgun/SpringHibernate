@@ -10,10 +10,10 @@ public class SpringApplication {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("configfile.xml");
 
         //Get bean
-        Delivery newDelivery = context.getBean("Delivery", Delivery.class);
+        Delivery newDelivery = context.getBean("deliveryGuy", Delivery.class);
 
         //Use Bean-methods
-        System.out.println(newDelivery.getName());
+        System.out.println(newDelivery.getName() + " is knocking on your door");
 
         //Close context
         context.close();

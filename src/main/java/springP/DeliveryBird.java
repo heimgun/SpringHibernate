@@ -3,7 +3,7 @@ package springP;
 import org.springframework.stereotype.Component;
 import springP.Delivery;
 
-@Component ("Delivery")
+@Component
 public class DeliveryBird implements Delivery {
 
     //Dependency
