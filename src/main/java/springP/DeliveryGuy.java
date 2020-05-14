@@ -1,10 +1,26 @@
 package springP;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DeliveryGuy implements Delivery {
 
+    @Autowired
+    private Package dailyMail;
+
+    //Dependency injection with autoWired
+    public DeliveryGuy(Package a){
+        dailyMail = a;
+    }
+
+    public DeliveryGuy(){
+        System.out.println("Inside the emptiness of the DeliveryGuy-constructor");
+    }
+
+    public void setDailyMail(Package a){
+        dailyMail = a;
+    }
 
     @Override
     public String getName() {
@@ -13,6 +29,6 @@ public class DeliveryGuy implements Delivery {
 
     @Override
     public String getItem() {
-        return null;
+        return dailyMail.getItem();
     }
 }

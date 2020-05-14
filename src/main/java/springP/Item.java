@@ -1,13 +1,16 @@
 package springP;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+@Component
 public class Item implements Package {
 
     String item;
 
-    ArrayList<String> listOfItems = new ArrayList<String>();
+    ArrayList<String> listOfItems = new ArrayList<>();
 
     public void fillList(){
         listOfItems.add("Pizza");

@@ -1,12 +1,14 @@
 package springP;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import springP.Delivery;
+
 
 @Component
 public class DeliveryBird implements Delivery {
 
     //Dependency
+    @Autowired
     private Package aPackage;
 
     public int phoneNumber;
@@ -19,7 +21,7 @@ public class DeliveryBird implements Delivery {
 
     //Empty Constructor
     public DeliveryBird(){
-
+        System.out.println("Inside the emptiness of the DeliveryBird-constructor");
     }
 
     //Setters
