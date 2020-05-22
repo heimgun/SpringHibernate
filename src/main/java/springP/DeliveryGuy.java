@@ -1,12 +1,14 @@
 package springP;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DeliveryGuy implements Delivery {
 
     @Autowired
+    @Qualifier("randomItem")
     private Package dailyMail;
 
     //Dependency injection with autoWired

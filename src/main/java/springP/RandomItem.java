@@ -1,12 +1,14 @@
 package springP;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 @Component
-public class Item implements Package {
+@Qualifier("randomItem")
+public class RandomItem implements Package {
 
     String item;
 
