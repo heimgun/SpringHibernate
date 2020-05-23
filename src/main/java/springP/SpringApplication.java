@@ -1,5 +1,6 @@
 package springP;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringApplication {
@@ -7,7 +8,7 @@ public class SpringApplication {
     public static void main(String[] args){
 
         //Config-file
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("configfile.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigClass.class);
 
         //Get bean
         Delivery newDelivery = context.getBean("deliveryBird", Delivery.class);
