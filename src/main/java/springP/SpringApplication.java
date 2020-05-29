@@ -11,7 +11,7 @@ public class SpringApplication {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigClass.class);
 
         //Get bean
-        Delivery newDelivery = context.getBean("deliveryBird", Delivery.class);
+        Delivery newDelivery = context.getBean("deliveryGuy", Delivery.class);
 
         //Use Bean-methods
         System.out.println(newDelivery.getName() + " is knocking on your door");
